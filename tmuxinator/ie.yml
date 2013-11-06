@@ -1,0 +1,14 @@
+# ~/.tmuxinator/ifa.yml
+# you can make as many tabs as you wish...
+
+project_name: Inner Ear
+project_root: ~/Development/C-Like/Projects/iOS/Inner\ Ear\ Project\ Folder/Inner\ Ear
+tabs:
+  - InnerEar:
+      layout: main-horizontal
+      panes:
+        - clear
+        - cd Submodules/TJUMusicTheory && clear
+  - TJUMT:
+      panes:
+        - cd ~/Development/C-Like/Components/TJUMusicTheory && clear
