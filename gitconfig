@@ -17,9 +17,12 @@
 	trustExitCode = true
 [mergetool]
 	prompt = false
+	keepBackup = true
 [merge]
 	tool = Kaleidoscope
 [push]
 	default = current
 [pull]
 	rebase = false
+[alias]
+    snap = stash clear && git stash && git stash apply

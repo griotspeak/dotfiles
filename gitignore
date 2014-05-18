@@ -1,5 +1,7 @@
 # OS X
 *.DS_Store
+*.orig
+*.iml
 
 # Xcode
 build/*
@@ -16,3 +18,12 @@ profile
 *.moved-aside
 DerivedData
 *.xccheckout
+*.idea/workspace.xml
+*.idea/tasks.xml
+*.idea/gradle.xml
+*.idea/libraries
+*.idea/dataSources.ids
+*.idea/dataSources.xml
+
+# for now
+*.idea/

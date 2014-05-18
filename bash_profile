@@ -14,10 +14,10 @@ fi
 [[ -s ~/.twig/twig-completion.bash ]] && source ~/.twig/twig-completion.bash
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
+export PATH="$HOME/Development/C-Like/External/llvm/build/Debug+Asserts/bin:$PATH"
 export PATH="$HOME/.bash_scripts:$PATH"
-export PATH="/usr/local/share/python:$PATH"
+export PATH=$PATH:$HOME/bin
 export OBJC_UNCRUSTIFY_CONFIG=$HOME/Development/UncrustifyConfigs/uncrustify_obj_c.cfg
-export PYTHONPATH="/usr/local/bin/python"
 # export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
 
 # alias
