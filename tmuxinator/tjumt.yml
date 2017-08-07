@@ -1,9 +1,0 @@
-# ~/.tmuxinator/tjumt.yml
-# you can make as many tabs as you wish...
-
-project_name: Tmuxinator
-project_root: ~/Development/C-Like/Components/TJUMusicTheory
-tabs:
-  - TJUMT:
-      panes:
-        - clear

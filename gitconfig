@@ -26,3 +26,11 @@
 	rebase = false
 [alias]
     snap = stash clear && git stash && git stash apply
+[credential]
+	helper = osxkeychain
+[grep]
+	lineNumber = true
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
