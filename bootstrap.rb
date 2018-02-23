@@ -37,6 +37,10 @@ def path_in_dotfiles(filename)
   path + filename
 end
 
+def open_in_dotfiles(filename)
+    system('open', "#{(path + filename)}")
+end
+
 def create_symlink(existing, link)
   if File.exists? link
     puts "#{link} already exists"
@@ -56,3 +60,4 @@ standard_symlink("bash_profile")
 standard_symlink("gitignore")
 standard_symlink("gitconfig")
 standard_symlink("tmux.conf")
+open_in_dotfiles("gs.terminal")
