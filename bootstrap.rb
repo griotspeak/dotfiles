@@ -38,7 +38,12 @@ def path_in_dotfiles(filename)
 end
 
 def open_in_dotfiles(filename)
-    system('open', "#{(path + filename)}")
+  puts "opening gs.terminal"
+  if system('open', "#{(path + filename)}")
+    puts "  successfully opened terminal theme"
+  else
+    puts "  failed to open terminal theme"
+  end 
 end
 
 def create_symlink(existing, link)
