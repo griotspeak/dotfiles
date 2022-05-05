@@ -49,8 +49,11 @@ end
 def create_symlink(existing, link)
   if File.exists? link
     puts "#{link} already exists"
+  elsif File.directory? existing
+    puts "creating symbolic link at '#{link}' to directory '#{existing}'"
+    File.symlink(existing, link)      
   else
-    puts "creating symbolic link at #{link} to #{existing}"
+    puts "creating hard link at '#{link}' to file '#{existing}'"
     File.link(existing, link)  
   end
 end
@@ -59,10 +62,17 @@ def standard_symlink(filename_without_dot)
   create_symlink(path_in_dotfiles(filename_without_dot), path_in_home(".#{filename_without_dot}"))
 end
 
+def config_symlink(filename_without_dot)
+  # create_symlink(path_in_dotfiles(filename), path_in_home(".config/#{filename}"))
+      puts "manually copy #{filename_without_dot}"
+end
+
 
 xcode_theme
 standard_symlink("bash_profile")
 standard_symlink("gitignore")
 standard_symlink("gitconfig")
-standard_symlink("tmux.conf")
 open_in_dotfiles("gs.terminal")
+config_symlink("fish")
+config_symlink("iterm2")
+config_symlink("karabiner")
